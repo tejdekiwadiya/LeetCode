@@ -12,17 +12,17 @@ public class Program {
         if (k == 0) {
             return 1;
         }
-        int duplicate = 0;
+        int count = 0;
         for (int i = 0; i < nums.length; i++) {
             for (int j = i + 1; j < nums.length; j++) {
                 if (nums[i] == nums[j]) {
                     int num = i * j;
                     if (num % k == 0) {
-                        duplicate++;
+                        count++;
                     }
                 }
-            }
+            }   
         }
-        return duplicate;
+        return count;
     }
 }
