@@ -2,17 +2,15 @@
 
 public class Program {
     public boolean hasCycle(ListNode head) {
-        if (head == null) {
-            return false;
-        }
-
-        ListNode node = head;
-        for (int i = 0; i < 10000; i++) {
-            node = node.next;
-            if (node == null) {
-                return false;
+        ListNode slow = head;
+        ListNode fast = head;
+        while(fast != null && fast.next != null){
+            slow = slow.next;
+            fast = fast.next.next;
+            if(fast == slow){
+                return true;
             }
         }
-        return true;
+        return false;
     }
 }
