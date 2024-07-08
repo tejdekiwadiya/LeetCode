@@ -1,3 +1,5 @@
+// https://leetcode.com/problems/sum-of-digits-in-base-k/description/
+
 public class Program {
     public static void main(String args[]) {
         int n = 34;
