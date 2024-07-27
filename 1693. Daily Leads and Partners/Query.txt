@@ -1,0 +1,5 @@
+https://leetcode.com/problems/daily-leads-and-partners/
+
+SELECT date_id, make_name, count(DISTINCT lead_id) as unique_leads, count(DISTINCT partner_id) as unique_partners
+FROM DailySales
+GROUP BY 1, 2;
