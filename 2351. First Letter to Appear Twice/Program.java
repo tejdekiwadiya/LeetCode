@@ -2,14 +2,15 @@
 
 public class Program {
     public static void main(String[] args) {
-        String s = "regzueqr";
+        String s = "abccbaacz";
         char ans = repeatedCharacter(s);
         System.out.println(ans);
     }
 
+    // Method 1: Using Indexing And Storing Technique
     public static char repeatedCharacter(String s) {
         char[] arr = s.toCharArray();
-        int[] ans = new int[] { 147, 147 };
+        int[] ans = new int[] { Integer.MAX_VALUE, Integer.MAX_VALUE };
         for (int i = 0; i < s.length(); i++) {
             for (int j = i + 1; j < s.length(); j++) {
                 if (arr[i] == arr[j]) {
@@ -22,4 +23,18 @@ public class Program {
         }
         return s.charAt(ans[0]);
     }
+
+    // Method 2 Using Contains
+    // public static char repeatedCharacter(String s) {
+    // String check = "";
+
+    // for (int i = 0; i < s.length(); i++) {
+    // if (check.contains(String.valueOf(s.charAt(i)))) {
+    // return s.charAt(i);
+    // }
+    // check += String.valueOf(s.charAt(i));
+    // }
+
+    // return s.charAt(0);
+    // }
 }
