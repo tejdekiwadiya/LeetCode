@@ -7,7 +7,7 @@ public class Program {
         System.out.println(ans);
     }
 
-    // Method 1: Using Indexing And Storing Technique
+    // Method 1: Brute-Force Nested Loop
     public static char repeatedCharacter(String s) {
         char[] arr = s.toCharArray();
         int[] ans = new int[] { Integer.MAX_VALUE, Integer.MAX_VALUE };
@@ -24,7 +24,7 @@ public class Program {
         return s.charAt(ans[0]);
     }
 
-    // Method 2 Using Contains
+    // Method 2 Using String Contains
     // public static char repeatedCharacter(String s) {
     // String check = "";
 
